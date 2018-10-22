@@ -27,7 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say("You launched the app!");
+  response.say("What's your name?" + request.hasSession());
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
